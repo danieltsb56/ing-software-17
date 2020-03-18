@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Daniel Alfonso Tausa</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <p>Daniel Alfonso tausa beltran</p>
+            <p>Clase</p>
+            <h:form>   
+                <p:growl id="growl" showDetail="true" sticky="true" />  
+
+                <p:panel header="ingenieria de software ">  
+                    <h:panelGrid columns="2" cellpadding="5">  
+
+                        <h:form id="form">  
+
+                            <p:accordionPanel>
+                                <p:tab title="Arquitectura de capas">
+                                    <h:panelGrid columns="2" cellpadding="10">
+                                        <p:graphicImage name="demo/images/godfather/godfather1.jpg" />
+                                        <h:outputText
+                                            value="La arquitectura basada en capas se enfoca en la distribución de roles
+                                            y responsabilidades de forma jerárquica proveyendo una forma muy efectiva de 
+                                            separación de responsabilidades. El rol indica el modo y tipo de interacción con 
+                                            otras capas, y la responsabilidad indica la funcionalidad que está siendo desarrollada.
+
+                                            " />
+                                    </h:panelGrid>
+                                </p:tab>
+                                <p:tab title="Arquitectura cliente -servidor">
+                                    <h:panelGrid columns="2" cellpadding="10">
+                                        <p:graphicImage name="demo/images/godfather/godfather2.jpg" />
+                                        <h:outputText value="Arquitectura Cliente servidor. Esta arquitectura consiste básicamente 
+                                                      en un cliente que realiza peticiones a otro programa (el servidor) que le da 
+                                                      respuesta. Aunque esta idea se puede aplicar a programas que se ejecutan sobre 
+                                                      una sola computadora es más ventajosa en un sistema operativo multiusuario 
+                                                      distribuido a través de una red de computadoras. La interacción cliente-servidor 
+                                                      es el soporte de la mayor parte de la comunicación por redes. 
+                                                      Ayuda a comprender las bases sobre las que están construidos los algoritmos distribuidos." />
+                                    </h:panelGrid>
+                                </p:tab>
+                                <p:tab title="mvc">
+                                    <h:panelGrid columns="2" cellpadding="10">
+                                        <p:graphicImage name="demo/images/godfather/godfather3.jpg" />
+                                        <h:outputText value="Modelo Vista Controlador (MVC) es un estilo de arquitectura de software que separa los datos de una aplicación, la interfaz de usuario, y la lógica de control en tres componentes distintos.
+
+                                                      Se trata de un modelo muy maduro y que ha demostrado su validez a lo largo de los años en todo tipo de aplicaciones, y sobre multitud de lenguajes y plataformas de desarrollo.
+
+                                                      El Modelo que contiene una representación de los datos que maneja el sistema, su lógica de negocio, y sus mecanismos de persistencia.
+                                                      La Vista, o interfaz de usuario, que compone la información que se envía al cliente y los mecanismos interacción con éste.
+                                                      El Controlador, que actúa como intermediario entre el Modelo y la Vista, gestionando el flujo de información entre ellos y las transformaciones para adaptar los datos a las necesidades de cada uno." />
+                                    </h:panelGrid>
+                                </p:tab>
+                            </p:accordionPanel>
+                        </h:form>
+
+                    </h:panelGrid>  
+                    <h:form>
+                        <p:growl id="messages" showDetail="true"/>
+
+                        <p:menuButton value="Bibliografias">
+                            <p:menuitem value="Arquitectura capas" action="#{menuView.save}" update="messages" icon="pi pi-save"/>
+                            <p:menuitem value="Arquitectura cliente-servidor" action="#{menuView.update}" update="messages" icon="pi pi-refresh"/>
+                            <p:menuitem value="mvc" action="#{menuView.delete}" ajax="false" icon="pi pi-times"/>
+                            <p:separator />
+                            <p:menuitem value="Pagina primeface" url="http://www.primefaces.org" icon="pi pi-home"/>
+                        </p:menuButton>
+                    </h:form>
+
+
+                </p:panel>
+
+            </h:form>
+          
+        </h:form>
+    </h:body>
+</html>
+
